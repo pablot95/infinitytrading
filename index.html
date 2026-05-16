@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Infinity Trader | Operá con Criterio, Control y Consistencia</title>
+  <meta name="description" content="Infinity Trader es una escuela de trading profesional. Aprendé análisis técnico, gestión del riesgo y psicología del trader con Arnold Reluz y Germán Berno. Formamos traders con criterio, disciplina y consistencia." />
+  <meta name="keywords" content="escuela de trading, mentoría trading, Arnold Reluz, Infinity Trader, análisis técnico, trading profesional, gestión de riesgo, ondas de Elliott, zonas de liquidez, psicología del trader" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Infinity Trader" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Infinity Trader | Operá con Criterio, Control y Consistencia" />
+  <meta property="og:description" content="Dejá de operar desde la emoción. Construí criterio, control y consistencia con la mentoría de Arnold Reluz y Germán Berno." />
+  <meta property="og:image" content="images/logoprincipal.jpeg" />
+  <meta property="og:url" content="https://infinitytrader.com" />
+  <meta property="og:locale" content="es_AR" />
+  <meta property="og:site_name" content="Infinity Trader" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Infinity Trader | Operá con Criterio, Control y Consistencia" />
+  <meta name="twitter:description" content="Dejá de operar desde la emoción. Construí criterio, control y consistencia." />
+  <meta name="twitter:image" content="images/logoprincipal.jpeg" />
+
+  <link rel="icon" type="image/jpeg" href="images/logoprincipal.jpeg" />
+  <link rel="canonical" href="https://infinitytrader.com" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "Infinity Trader",
+    "description": "Escuela de trading profesional especializada en análisis técnico, gestión del riesgo y psicología del trader.",
+    "url": "https://infinitytrader.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://infinitytrader.com/images/logoprincipal.jpeg"
+    },
+    "founder": {
+      "@type": "Person",
+      "name": "Arnold Reluz",
+      "jobTitle": "Fundador y Mentor Principal"
+    },
+    "employee": [
+      {
+        "@type": "Person",
+        "name": "Arnold Reluz",
+        "jobTitle": "Fundador y Mentor Principal"
+      },
+      {
+        "@type": "Person",
+        "name": "Germán Berno",
+        "jobTitle": "Trader Profesional y Mentor"
+      }
+    ],
+    "offers": {
+      "@type": "Offer",
+      "name": "Mentoría de Trading Profesional",
+      "description": "Programa completo de formación en trading: clases en vivo, material de estudio, comunidad privada y acompañamiento personalizado."
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <header class="nav" id="nav" role="banner">
+    <div class="nav__container">
+      <a href="#inicio" class="nav__logo" aria-label="Infinity Trader — Volver al inicio">
+        <img src="images/logoprincipal.jpeg" alt="Logotipo de Infinity Trader" width="38" height="38" />
+      </a>
+
+      <nav class="nav__links" role="navigation" aria-label="Navegación principal">
+        <a href="#solucion" class="nav__link">La Solución</a>
+        <a href="#metodo" class="nav__link">El Método</a>
+        <a href="#incluye" class="nav__link">Incluye</a>
+        <a href="#mentores" class="nav__link">Mentores</a>
+      </nav>
+
+      <a href="#cta" class="btn btn--primary btn--sm nav__cta">Quiero empezar</a>
+
+      <button class="nav__toggle" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <div class="nav__mobile" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Menú móvil" hidden>
+      <a href="#solucion" class="nav__mobile-link">La Solución</a>
+      <a href="#metodo" class="nav__mobile-link">El Método</a>
+      <a href="#incluye" class="nav__mobile-link">Incluye</a>
+      <a href="#mentores" class="nav__mobile-link">Mentores</a>
+      <a href="#cta" class="btn btn--primary">Quiero empezar</a>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero" id="inicio" aria-label="Sección principal de Infinity Trader">
+      <canvas class="hero__canvas" id="heroCanvas" aria-hidden="true"></canvas>
+      <div class="hero__glow" aria-hidden="true"></div>
+
+      <div class="hero__content">
+        <div class="hero__badge reveal">
+          <span class="hero__badge-dot" aria-hidden="true"></span>
+          Mentoría guiada por Arnold Reluz
+        </div>
+
+        <h1 class="hero__headline reveal reveal--delay-1">
+          Operá con Criterio, Control y 
+          <span class="text--gradient">Consistencia</span>
+        </h1>
+
+        <p class="hero__sub reveal reveal--delay-2">
+          Construí criterio, control y consistencia.<br>
+          Infinity Trader forma traders que piensan diferente.
+        </p>
+
+        <div class="hero__actions reveal reveal--delay-3">
+          <a href="#cta" class="btn btn--primary btn--lg">
+            Quiero empezar
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="#solucion" class="btn btn--ghost btn--lg">Ver el método</a>
+        </div>
+      </div>
+
+      <div class="hero__words" aria-hidden="true">
+        <span>DISCIPLINA</span>
+        <span>ESTRATEGIA</span>
+        <span>EJECUCIÓN</span>
+        <span>LIBERTAD</span>
+      </div>
+
+      <a href="#solucion" class="hero__scroll" aria-label="Ir a la siguiente sección">
+        <span></span>
+      </a>
+    </section>
+
+    <section class="solucion" id="solucion" aria-labelledby="solucion-heading">
+      <div class="solucion__media reveal">
+        <img
+          src="images/imagenprincipal-nohero.jpeg"
+          alt="Trader ascendiendo una escalera con las palabras Disciplina, Estrategia, Ejecución y Libertad grabadas en la pared, simbolizando el camino del trader profesional"
+          loading="lazy"
+          width="700"
+          height="900"
+        />
+        <div class="solucion__media-overlay" aria-hidden="true"></div>
+      </div>
+
+      <div class="solucion__content">
+        <span class="section-label reveal">La Solución</span>
+
+        <h2 id="solucion-heading" class="solucion__heading reveal reveal--delay-1">
+          Infinity Trader<br>te da un <span class="text--gradient">camino claro.</span>
+        </h2>
+
+        <div class="solucion__body reveal reveal--delay-2">
+          <p>Nuestra formación está diseñada para que aprendas a leer el mercado, <br> crear un plan operativo y desarrollar disciplina antes de buscar resultados</p>
+          <p class="solucion__closing">No formamos personas que solo buscan entradas. <strong>Formamos traders capaces de construir criterio, control y consistencia.</strong></p>
+        </div>
+
+        <div class="feature-chips reveal reveal--delay-3" role="list" aria-label="Pilares de la formación">
+          <article class="feature-chip" role="listitem">
+            <div class="feature-chip__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            </div>
+            <span>Análisis<br>técnico</span>
+          </article>
+          <article class="feature-chip" role="listitem">
+            <div class="feature-chip__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <span>Gestión<br>del riesgo</span>
+          </article>
+          <article class="feature-chip" role="listitem">
+            <div class="feature-chip__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><circle cx="12" cy="17" r=".5" fill="currentColor"/></svg>
+            </div>
+            <span>Psicología<br>del trader</span>
+          </article>
+          <article class="feature-chip" role="listitem">
+            <div class="feature-chip__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/><line x1="12" y1="2" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="22"/><line x1="2" y1="12" x2="6" y2="12"/><line x1="18" y1="12" x2="22" y2="12"/></svg>
+            </div>
+            <span>Ejecución<br>con criterio</span>
+          </article>
+          <article class="feature-chip" role="listitem">
+            <div class="feature-chip__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <span>Acompañamiento<br>y comunidad</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+       <section class="metodo" id="metodo" aria-labelledby="metodo-heading">
+      <div class="metodo__intro">
+        <span class="section-label reveal">El Método</span>
+        <h2 id="metodo-heading" class="reveal reveal--delay-1">
+          Una mentoría enfocada en
+          <span class="text--gradient">precisión y proceso.</span>
+        </h2>
+        <p class="reveal reveal--delay-2">
+          Trabajamos con una estructura de análisis pensada para entender zonas, movimientos, contexto y ejecución. No se trata de adivinar el mercado, sino de <strong>construir criterio.</strong>
+        </p>
+      </div>
+
+      <div class="metodo__grid" role="list" aria-label="Contenido del programa de mentoría">
+        <article class="metodo-card reveal" role="listitem">
+          <div class="metodo-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="2" y="2" width="20" height="20" rx="1.5"/>
+              <line x1="2" y1="7" x2="22" y2="7" stroke-width="1" stroke-dasharray="2 1.5"/>
+              <line x1="2" y1="12" x2="22" y2="12" stroke-width="1.2"/>
+              <line x1="2" y1="17" x2="22" y2="17" stroke-width="1" stroke-dasharray="2 1.5"/>
+              <polyline points="3 19 7 9 11 13.5 15 6 21 10" stroke-width="1.8"/>
+            </svg>
+          </div>
+          <div class="metodo-card__text">
+            <span class="metodo-card__num" aria-hidden="true">01</span>
+            <h3>Teoría de los cuartos</h3>
+          </div>
+        </article>
+
+        <article class="metodo-card reveal reveal--delay-1" role="listitem">
+          <div class="metodo-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <polyline points="1 21 3.5 11 6 17 9.5 5 12 12 14.5 8"/>
+              <polyline points="14.5 8 16.5 14 19 10 23 17"/>
+              <circle cx="3.5" cy="11" r="0.9" fill="currentColor" stroke="none"/>
+              <circle cx="9.5" cy="5" r="0.9" fill="currentColor" stroke="none"/>
+              <circle cx="14.5" cy="8" r="0.9" fill="currentColor" stroke="none"/>
+              <circle cx="19" cy="10" r="0.9" fill="currentColor" stroke="none"/>
+            </svg>
+          </div>
+          <div class="metodo-card__text">
+            <span class="metodo-card__num" aria-hidden="true">02</span>
+            <h3>Ondas de Elliott</h3>
+          </div>
+        </article>
+
+        <article class="metodo-card reveal reveal--delay-2" role="listitem">
+          <div class="metodo-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <polyline points="2 19 5 13 8 16 11 8 14 12 17 6 20 9 22 5"/>
+              <line x1="5" y1="13" x2="11" y2="13" stroke-width="0.9" stroke-dasharray="1.5 1"/>
+              <line x1="11" y1="8" x2="17" y2="8" stroke-width="0.9" stroke-dasharray="1.5 1"/>
+              <polyline points="20 7 22 5 22 9" stroke-width="1.2"/>
+            </svg>
+          </div>
+          <div class="metodo-card__text">
+            <span class="metodo-card__num" aria-hidden="true">03</span>
+            <h3>Estructura del mercado</h3>
+          </div>
+        </article>
+
+        <article class="metodo-card reveal" role="listitem">
+          <div class="metodo-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="2" y="2.5" width="20" height="3" rx="0.5" fill="currentColor" fill-opacity="0.18" stroke-width="1"/>
+              <rect x="2" y="18.5" width="20" height="3" rx="0.5" fill="currentColor" fill-opacity="0.18" stroke-width="1"/>
+              <polyline points="3 20.5 6 11 9 16 12 6 15 13 19 4"/>
+            </svg>
+          </div>
+          <div class="metodo-card__text">
+            <span class="metodo-card__num" aria-hidden="true">04</span>
+            <h3>Zonas de liquidez</h3>
+          </div>
+        </article>
+
+        <article class="metodo-card reveal reveal--delay-1" role="listitem">
+          <div class="metodo-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <line x1="6" y1="5" x2="6" y2="19"/>
+              <rect x="4.5" y="8.5" width="3" height="6" rx="0.3" fill="currentColor" fill-opacity="0.2" stroke-width="1"/>
+              <line x1="12" y1="4" x2="12" y2="17"/>
+              <rect x="10.5" y="6.5" width="3" height="7" rx="0.3" fill="currentColor" fill-opacity="0.2" stroke-width="1"/>
+              <circle cx="19" cy="11" r="4.5"/>
+              <polyline points="16.8 11 18.5 12.8 21.2 9.2" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <div class="metodo-card__text">
+            <span class="metodo-card__num" aria-hidden="true">05</span>
+            <h3>Confirmaciones de entrada</h3>
+          </div>
+        </article>
+
+        <article class="metodo-card reveal reveal--delay-2" role="listitem">
+          <div class="metodo-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <polyline points="2 16 5 12 8 14 11 8 14 10"/>
+              <line x1="14" y1="10" x2="22" y2="10" stroke-dasharray="2 1.5"/>
+              <line x1="14" y1="5" x2="22" y2="5"/>
+              <line x1="14" y1="15" x2="22" y2="15"/>
+              <polyline points="19 7.5 21 5 23 7.5" stroke-width="1.2"/>
+              <polyline points="19 12.5 21 15 23 12.5" stroke-width="1.2"/>
+              <circle cx="14" cy="10" r="1.2" fill="currentColor" stroke="none"/>
+            </svg>
+          </div>
+          <div class="metodo-card__text">
+            <span class="metodo-card__num" aria-hidden="true">06</span>
+            <h3>Gestión de operaciones</h3>
+          </div>
+        </article>
+
+        <article class="metodo-card metodo-card--wide reveal" role="listitem">
+          <div class="metodo-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+              <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+              <line x1="4" y1="7" x2="20" y2="7" stroke-width="1"/>
+              <polyline points="9 16 11 13 13 15 16 10" stroke-width="1.3"/>
+              <polyline points="9 10.5 10.5 12 13 9" stroke-width="1.3"/>
+            </svg>
+          </div>
+          <div class="metodo-card__text">
+            <span class="metodo-card__num" aria-hidden="true">07</span>
+            <h3>Bitácora y revisión</h3>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="incluye" id="incluye" aria-labelledby="incluye-heading">
+      <div class="incluye__wrapper">
+        <div class="incluye__logo-col reveal">
+          <img
+            src="images/logosecundario.jpeg"
+            alt="Infinity Trader — Plataforma de contenido"
+            class="incluye__logo"
+            loading="lazy"
+            width="500"
+            height="500"
+          />
+        </div>
+
+        <div class="incluye__main">
+          <div class="section-header">
+            <span class="section-label reveal">Qué vas a encontrar</span>
+        <h2 id="incluye-heading" class="section-title reveal reveal--delay-1">
+          Todo lo que necesitás<br>para <span class="text--gradient">operar mejor.</span>
+        </h2>
+      </div>
+
+      <div class="incluye__grid" role="list">
+        <article class="incluye-card reveal" role="listitem">
+          <div class="incluye-card__num" aria-hidden="true">01</div>
+          <div class="incluye-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/><polygon points="10 8 16 12 10 16 10 8" fill="currentColor" stroke="none"/></svg>
+          </div>
+          <h3>Clases en vivo y grabadas</h3>
+          <p>Sesiones en tiempo real con tus mentores y acceso al material grabado disponible las 24 horas.</p>
+        </article>
+
+        <article class="incluye-card reveal reveal--delay-1" role="listitem">
+          <div class="incluye-card__num" aria-hidden="true">02</div>
+          <div class="incluye-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/><line x1="8" y1="7" x2="16" y2="7"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+          </div>
+          <h3>Material de estudio organizado</h3>
+          <p>Recursos estructurados y secuenciados para que tu aprendizaje sea progresivo y sólido.</p>
+        </article>
+
+        <article class="incluye-card reveal reveal--delay-2" role="listitem">
+          <div class="incluye-card__num" aria-hidden="true">03</div>
+          <div class="incluye-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          </div>
+          <h3>Acompañamiento del mentor</h3>
+          <p>Contacto directo con Arnold y Germán para resolver dudas y revisar tus operaciones en detalle.</p>
+        </article>
+
+        <article class="incluye-card reveal" role="listitem">
+          <div class="incluye-card__num" aria-hidden="true">04</div>
+          <div class="incluye-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          </div>
+          <h3>Comunidad privada</h3>
+          <p>Rodeate de traders con el mismo objetivo: crecer de manera seria, sostenida y con criterio propio.</p>
+        </article>
+
+        <article class="incluye-card reveal reveal--delay-1" role="listitem">
+          <div class="incluye-card__num" aria-hidden="true">05</div>
+          <div class="incluye-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          </div>
+          <h3>Análisis del mercado</h3>
+          <p>Análisis periódicos con contexto, zonas clave y escenarios de alta probabilidad para operar mejor.</p>
+        </article>
+
+        <article class="incluye-card reveal reveal--delay-2" role="listitem">
+          <div class="incluye-card__num" aria-hidden="true">06</div>
+          <div class="incluye-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+          </div>
+          <h3>Ejercicios prácticos</h3>
+          <p>Actividades para aplicar lo aprendido: lecturas de precio, backtesting y bitácora de operaciones.</p>
+        </article>
+      </div>
+
+        <div class="incluye__cta reveal">
+          <a href="#" class="btn btn--primary btn--lg" target="_blank" rel="noopener noreferrer">
+            Ir a nuestro canal
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </a>
+        </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section class="mentores" id="mentores" aria-labelledby="mentores-heading">
+      <div class="section-header">
+        <span class="section-label reveal">Los Mentores</span>
+        <h2 id="mentores-heading" class="section-title reveal reveal--delay-1">
+          Formados en el mercado.<br>
+          <span class="text--gradient">Enfocados en vos.</span>
+        </h2>
+      </div>
+
+      <div class="mentores__grid">
+        <article class="mentor-card reveal" aria-label="Arnold Reluz, Fundador y Mentor Principal de Infinity Trader">
+          <div class="mentor-card__visual">
+            <img
+              src="images/arnoldreluz.jpeg"
+              alt="Arnold Reluz, fundador de Infinity Trader, trader con más de 5 años de experiencia en análisis técnico y gestión de riesgo"
+              loading="lazy"
+              width="480"
+              height="580"
+            />
+            <div class="mentor-card__glow" aria-hidden="true"></div>
+          </div>
+          <div class="mentor-card__body">
+            <div class="mentor-card__tags">
+              <span class="tag tag--primary">Fundador</span>
+              <span class="tag">+5 años de experiencia</span>
+            </div>
+            <h3>Arnold Reluz</h3>
+            <p class="mentor-card__role">Mentor Principal · Infinity Trader</p>
+            <blockquote class="mentor-card__bio">
+              Soy Arnold Reluz, Fundador de Infinity Trader. Opero hace más de 5 años y mi enfoque está basado en estructura, disciplina y gestión de riesgo. Mi objetivo es ayudarte a dejar de operar desde la emoción y empezar a construir criterio propio.
+            </blockquote>
+          </div>
+        </article>
+
+        <article class="mentor-card mentor-card--alt reveal reveal--delay-1" aria-label="Germán Berno, Trader Profesional y Mentor en Infinity Trader">
+          <div class="mentor-card__visual">
+            <img
+              src="images/germanberno.jpeg"
+              alt="Germán Berno, trader profesional con más de 3 años de experiencia y mentor en Infinity Trader"
+              loading="lazy"
+              width="480"
+              height="580"
+            />
+            <div class="mentor-card__glow" aria-hidden="true"></div>
+          </div>
+          <div class="mentor-card__body">
+            <div class="mentor-card__tags">
+              <span class="tag tag--primary">Mentor</span>
+              <span class="tag">+3 años de experiencia</span>
+            </div>
+            <h3>Germán Berno</h3>
+            <p class="mentor-card__role">Trader Profesional · Infinity Trader</p>
+            <blockquote class="mentor-card__bio">
+              Soy Germán Berno, trader profesional con más de 3 años de experiencia y mentor en Infinity Trader. Mi objetivo es ayudarte a comprender los movimientos del mercado para poder alinearte con él y operar con la mayor precisión posible.
+            </blockquote>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="cta-section" id="cta" aria-labelledby="cta-heading">
+      <div class="cta-section__bg" aria-hidden="true"></div>
+      <div class="cta-section__content">
+        <span class="section-label reveal">Únete ahora</span>
+        <h2 id="cta-heading" class="reveal reveal--delay-1">
+          Tu próximo nivel<br>empieza <span class="text--gradient">hoy.</span>
+        </h2>
+        <p class="reveal reveal--delay-2">
+          Dejá de buscar señales y empezá a entender el mercado. Con Infinity Trader vas a tener el método, el acompañamiento y la comunidad para hacerlo posible.
+        </p>
+        <a href="#" class="btn btn--primary btn--xl reveal reveal--delay-3" aria-label="Unirse a la mentoría de Infinity Trader">
+          Quiero unirme a la mentoría
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <a href="#inicio" class="footer__logo" aria-label="Infinity Trader — Volver al inicio">
+          <img src="images/logoprincipal.jpeg" alt="Logotipo de Infinity Trader" width="36" height="36" />
+          <span>Infinity <em>Trader</em></span>
+        </a>
+        <p>Escuela de trading profesional. Formamos traders con criterio, disciplina y consistencia.</p>
+      </div>
+
+      <nav class="footer__nav" aria-label="Navegación del pie de página">
+        <span class="footer__nav-label">Navegación</span>
+        <a href="#solucion">La Solución</a>
+        <a href="#metodo">El Método</a>
+        <a href="#incluye">Incluye</a>
+        <a href="#mentores">Mentores</a>
+        <a href="#cta">Empezar</a>
+      </nav>
+    </div>
+
+    <div class="footer__bottom">
+      <p class="footer__legal">&copy; 2025 Infinity Trader. Todos los derechos reservados.</p>
+      <p class="footer__credit">
+        Developed and designed by
+        <a href="https://gokywebs.net" target="_blank" rel="noopener noreferrer" aria-label="Gokywebs — Sitio web de desarrollo">Gokywebs</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
