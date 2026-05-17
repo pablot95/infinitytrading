@@ -584,7 +584,7 @@ blockquote {
 .solucion__media {
   position: relative;
   overflow: hidden;
-  min-height: 480px;
+  min-height: 340px;
 }
 
 .solucion__media img {
