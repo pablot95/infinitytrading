@@ -996,7 +996,7 @@ blockquote {
 .metodo__grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1rem;
+  gap: 0.5rem;
 }
 
 .metodo-card {
@@ -1092,7 +1092,7 @@ blockquote {
 .mentores__grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 2rem;
+  gap: 0rem;
   margin-top: 0;
 }
 
@@ -1116,7 +1116,7 @@ blockquote {
 .mentor-card__visual {
   position: relative;
   overflow: hidden;
-  aspect-ratio: 4/3;
+  aspect-ratio: 5/4;
 }
 
 .mentor-card__visual img {
@@ -1450,7 +1450,7 @@ blockquote {
   }
 
   .mentor-card {
-    grid-template-columns: 300px 1fr;
+    grid-template-columns: 220px 1fr;
   }
 
   .mentores {
@@ -1513,7 +1513,7 @@ blockquote {
   }
 
   .mentor-card {
-    grid-template-columns: 360px 1fr;
+    grid-template-columns: 300px 1fr;
   }
 
   .mentor-card__visual {
@@ -1540,7 +1540,7 @@ blockquote {
   }
 
   .mentor-card {
-    grid-template-columns: 420px 1fr;
+    grid-template-columns: 380px 1fr;
   }
 }
 
@@ -1679,6 +1679,11 @@ blockquote {
   font-size: 0.8125rem;
   color: var(--c-text-dim);
   transition: color var(--transition);
+}
+
+.mentor-social-link--lg {
+  font-size: 1.4rem;
+  gap: 0.5rem;
 }
 
 .mentor-social-link:hover {
