@@ -787,8 +787,25 @@ blockquote {
 .incluye {
   padding: clamp(5rem, 10vw, 9rem) 0;
   background: var(--c-surface);
+  background-image: url('images/quevasaencontrarmobile.jpeg');
+  background-size: cover;
+  background-position: center;
   width: 100%;
   position: relative;
+}
+
+.incluye::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(2, 3, 10, 0.78);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.incluye > * {
+  position: relative;
+  z-index: 1;
 }
 
 .incluye__grid {
@@ -912,11 +929,29 @@ blockquote {
 .metodo {
   padding: 40px 10px;
   background: var(--c-surface);
+  background-image: url('images/elmetodomobile.jpeg');
+  background-size: cover;
+  background-position: center;
   display: grid;
   grid-template-columns: 1fr;
   gap: 4rem;
-  max-width: var(--container-max);
+  max-width: none;
   margin: 0 auto;
+  position: relative;
+}
+
+.metodo::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(2, 3, 10, 0.78);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.metodo > * {
+  position: relative;
+  z-index: 1;
 }
 
 .metodo__intro {
@@ -1348,6 +1383,14 @@ blockquote {
 }
 
 @media (min-width: 768px) {
+  .incluye {
+    background-image: url('images/quevasaencontrar.jpeg');
+  }
+
+  .metodo {
+    background-image: url('images/elmetodo.jpeg');
+  }
+
   .incluye__header-row {
     flex-direction: row;
     align-items: center;
@@ -1498,6 +1541,45 @@ blockquote {
 
   .mentor-card {
     grid-template-columns: 420px 1fr;
+  }
+}
+
+/* ── Social Bar ── */
+.social-bar {
+  padding: clamp(2rem, 4vw, 3rem) var(--container-padding);
+  border-bottom: 1px solid var(--c-border);
+}
+
+.social-bar__inner {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.social-bar__label {
+  display: block;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--c-text-muted);
+  margin-bottom: 1.25rem;
+}
+
+.social-bar__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+  width: 100%;
+  max-width: 680px;
+}
+
+@media (min-width: 560px) {
+  .social-bar__grid {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
