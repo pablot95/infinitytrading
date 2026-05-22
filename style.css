@@ -286,6 +286,7 @@ blockquote {
   display: flex;
   align-items: center;
   gap: 2rem;
+  position: relative;
 }
 
 .nav__logo {
@@ -293,14 +294,25 @@ blockquote {
   align-items: center;
   gap: 10px;
   flex-shrink: 0;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) translateY(-6px);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s var(--ease), transform 0.4s var(--ease);
+}
+
+.nav.scrolled .nav__logo {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0);
 }
 
 .nav__logo img {
-  width: 78px;
+  width: 72px;
   height: auto;
-  border-radius: var(--radius);
   object-fit: cover;
-  border-radius: 20%;
+  border-radius: 12px;
 }
 
 .nav__logo span {
@@ -435,7 +447,7 @@ blockquote {
   inset: 0;
   width: 100%;
   height: 100%;
-  opacity: 0.35;
+  opacity: 0.75;
 }
 
 .hero__glow {
@@ -454,6 +466,18 @@ blockquote {
   z-index: 2;
   max-width: 860px;
   text-align: center;
+}
+
+.hero__logo-hero {
+  margin-bottom: 2rem;
+}
+
+.hero__logo-hero img {
+  width: 140px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 20%;
+  margin: 0 auto;
 }
 
 .hero__badge {
@@ -578,13 +602,37 @@ blockquote {
 .solucion {
   display: grid;
   grid-template-columns: 1fr;
-  background: var(--c-surface);
+  position: relative;
+  background-image: url('images/fondonosotros.jpeg');
+  background-size: cover;
+  background-position: center;
+}
+
+.solucion::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(2, 3, 10, 0.80);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.solucion > * {
+  position: relative;
+  z-index: 1;
 }
 
 .solucion__media {
   position: relative;
   overflow: hidden;
   min-height: 340px;
+}
+
+.solucion__media img,
+.solucion__media picture {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .solucion__media img {
@@ -609,10 +657,20 @@ blockquote {
 }
 
 .solucion__content {
-  padding: 10px;  
+  padding: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative;
+}
+
+.solucion__content::before {
+  display: none;
+}
+
+.solucion__content > * {
+  position: relative;
+  z-index: 1;
 }
 
 .solucion__heading {
@@ -665,25 +723,34 @@ blockquote {
 }
 
 .feature-chips {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.875rem;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1rem;
   margin-top: 2.5rem;
 }
 
 .feature-chip {
+  grid-column: span 2;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.625rem;
-  padding: 1rem 0.875rem;
+  gap: 0.875rem;
+  padding: 1.75rem 1rem;
   background: var(--c-blue-dim);
   border: 1px solid var(--c-blue-border);
   border-radius: var(--radius-md);
-  min-width: 80px;
   text-align: center;
   transition: background var(--transition), border-color var(--transition), transform var(--transition);
   cursor: default;
+}
+
+/* Centrar las 2 últimas cards en la segunda fila */
+.feature-chip:nth-child(4) {
+  grid-column: 2 / span 2;
+}
+
+.feature-chip:nth-child(5) {
+  grid-column: 4 / span 2;
 }
 
 .feature-chip:hover {
@@ -693,8 +760,8 @@ blockquote {
 }
 
 .feature-chip__icon {
-  width: 28px;
-  height: 28px;
+  width: 38px;
+  height: 38px;
   color: var(--c-blue);
   flex-shrink: 0;
   transition: color var(--transition);
@@ -710,7 +777,7 @@ blockquote {
 }
 
 .feature-chip span {
-  font-size: 0.6875rem;
+  font-size: 0.8125rem;
   font-weight: 500;
   color: var(--c-text-dim);
   line-height: 1.4;
@@ -856,6 +923,26 @@ blockquote {
   max-width: 560px;
 }
 
+.metodo__visual {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  min-height: 280px;
+}
+
+.metodo__visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: brightness(0.88) contrast(1.05);
+  border-radius: var(--radius-lg);
+  transition: transform 0.6s var(--ease);
+}
+
+.metodo__visual:hover img {
+  transform: scale(1.03);
+}
+
 .metodo__intro h2 {
   font-family: var(--f-display);
   font-size: clamp(2.25rem, 5vw, 3.5rem);
@@ -941,7 +1028,28 @@ blockquote {
 }
 
 .mentores {
-  padding: 40px 10px;
+  padding: clamp(5rem, 10vw, 8rem) var(--pad);
+  position: relative;
+  background-image: url('images/fondonosotrosmobile.jpeg');
+  background-size: cover;
+  background-position: center;
+}
+
+.mentores::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(2, 3, 10, 0.46);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.mentores > * {
+  position: relative;
+  z-index: 1;
+}
+
+.mentores__inner {
   max-width: 1600px;
   margin: 0 auto;
 }
@@ -957,15 +1065,17 @@ blockquote {
   display: grid;
   grid-template-columns: 1fr;
   background: var(--c-card);
-  border: 1px solid var(--c-border);
+  border: 2.5px solid rgba(18, 107, 255, 0.55);
   border-radius: var(--radius-lg);
   overflow: hidden;
+  box-shadow: 0 0 18px rgba(18, 107, 255, 0.25), 0 0 40px rgba(18, 107, 255, 0.1), inset 0 0 0 1px rgba(18, 107, 255, 0.1);
   transition: border-color var(--transition), box-shadow var(--transition);
+  margin: 0 clamp(0.5rem, 3vw, 2rem);
 }
 
 .mentor-card:hover {
-  border-color: var(--c-blue-border);
-  box-shadow: 0 16px 60px rgba(0, 0, 0, 0.3), 0 0 0 1px var(--c-blue-border);
+  border-color: rgba(18, 107, 255, 0.9);
+  box-shadow: 0 0 28px rgba(18, 107, 255, 0.5), 0 0 70px rgba(18, 107, 255, 0.2), inset 0 0 0 1px rgba(18, 107, 255, 0.2);
 }
 
 .mentor-card__visual {
@@ -1059,15 +1169,18 @@ blockquote {
   padding: clamp(6rem, 12vw, 11rem) var(--pad);
   text-align: center;
   overflow: hidden;
-  background: var(--c-surface);
+  background-image: url('images/fondotuproximonivel.jpeg');
+  background-size: cover;
+  background-position: center;
 }
 
 .cta-section__bg {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse 80% 60% at 50% 120%, rgba(18, 107, 255, 0.14) 0%, transparent 70%),
-    radial-gradient(ellipse 50% 40% at 20% 50%, rgba(255, 0, 60, 0.05) 0%, transparent 60%);
+    linear-gradient(rgba(2, 3, 10, 0.61), rgba(2, 3, 10, 0.61)),
+    radial-gradient(ellipse 80% 60% at 50% 120%, rgba(18, 107, 255, 0.12) 0%, transparent 70%),
+    radial-gradient(ellipse 50% 40% at 20% 50%, rgba(255, 0, 60, 0.04) 0%, transparent 60%);
   pointer-events: none;
 }
 
@@ -1297,6 +1410,10 @@ blockquote {
     grid-template-columns: 300px 1fr;
   }
 
+  .mentores {
+    background-image: url('images/fondonosotros.jpeg');
+  }
+
   .mentor-card__visual {
     aspect-ratio: unset;
     min-height: 360px;
@@ -1320,7 +1437,8 @@ blockquote {
   }
 
   .metodo {
-    grid-template-columns: 1fr 1.4fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
     align-items: start;
     max-width: none;
     padding-left: clamp(2rem, 8vw, 8rem);
@@ -1328,8 +1446,22 @@ blockquote {
   }
 
   .metodo__intro {
+    grid-column: 1;
+    grid-row: 1;
     position: sticky;
     top: calc(var(--nav-h) + 2rem);
+    max-width: none;
+  }
+
+  .metodo__visual {
+    grid-column: 2;
+    grid-row: 1;
+    min-height: 360px;
+  }
+
+  .metodo__grid {
+    grid-column: 1 / -1;
+    grid-row: 2;
   }
 
   .mentor-card {

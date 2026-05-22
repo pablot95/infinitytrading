@@ -100,7 +100,7 @@
     let time = 0;
 
     const candles = [];
-    const NUM_CANDLES = 32;
+    const NUM_CANDLES = 18;
 
     function resize() {
       width = canvas.width = canvas.offsetWidth;
@@ -111,15 +111,18 @@
     function buildCandles() {
       candles.length = 0;
       const spacing = width / (NUM_CANDLES + 1);
-      let price = height * 0.5;
+      const isDesktop = width >= 768;
+      let price = isDesktop ? height * 0.5 : height * 0.32;
+      const moveFactor = isDesktop ? 0.2 : 0.11;
+      const wickFactor = isDesktop ? 0.09 : 0.05;
 
       for (let i = 0; i < NUM_CANDLES; i++) {
-        const move = (Math.random() - 0.48) * height * 0.06;
+        const move = (Math.random() - 0.48) * height * moveFactor;
         const open = price;
         price += move;
         const close = price;
-        const high = Math.max(open, close) + Math.random() * height * 0.02;
-        const low = Math.min(open, close) - Math.random() * height * 0.02;
+        const high = Math.max(open, close) + Math.random() * height * wickFactor;
+        const low = Math.min(open, close) - Math.random() * height * wickFactor;
         const bullish = close >= open;
 
         candles.push({
@@ -130,7 +133,7 @@
           low,
           bullish,
           opacity: 0,
-          targetOpacity: 0.12 + Math.random() * 0.12
+          targetOpacity: 0.38 + Math.random() * 0.28
         });
       }
     }
@@ -165,13 +168,13 @@
 
         c.opacity = Math.min(c.opacity + 0.008, c.targetOpacity);
 
-        const candleWidth = Math.max(4, (width / NUM_CANDLES) * 0.4);
+        const candleWidth = Math.max(8, (width / NUM_CANDLES) * 0.62);
         const color = c.bullish
           ? 'rgba(18, 107, 255, ' + c.opacity + ')'
           : 'rgba(255, 0, 60, ' + c.opacity + ')';
 
         ctx.strokeStyle = color;
-        ctx.lineWidth = 0.8;
+        ctx.lineWidth = 1.8;
         ctx.beginPath();
         ctx.moveTo(c.x, c.high);
         ctx.lineTo(c.x, c.low);
