@@ -1424,6 +1424,11 @@ blockquote {
     align-items: start;
   }
 
+  .footer__social-grid {
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 520px;
+  }
+
   .footer__bottom {
     flex-direction: row;
     justify-content: space-between;
@@ -1494,6 +1499,131 @@ blockquote {
   .mentor-card {
     grid-template-columns: 420px 1fr;
   }
+}
+
+/* ── Footer Social Cards ── */
+.footer__social-section {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding-bottom: clamp(2.5rem, 4vw, 3.5rem);
+  border-top: 1px solid var(--c-border);
+  padding-top: clamp(2rem, 4vw, 3rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.footer__social-label {
+  display: block;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--c-text-muted);
+  margin-bottom: 1.25rem;
+}
+
+.footer__social-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.625rem;
+  max-width: 520px;
+}
+
+.footer-social-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.875rem 0.75rem;
+  background: var(--c-blue-dim);
+  border: 1px solid var(--c-blue-border);
+  border-radius: var(--radius-md);
+  text-align: center;
+  text-decoration: none;
+  transition: background var(--transition), border-color var(--transition), transform var(--transition);
+}
+
+.footer-social-card:hover {
+  background: rgba(18, 107, 255, 0.14);
+  border-color: rgba(18, 107, 255, 0.4);
+  transform: translateY(-3px);
+}
+
+.footer-social-card__icon {
+  width: 22px;
+  height: 22px;
+  color: var(--c-blue);
+  flex-shrink: 0;
+  transition: color var(--transition);
+}
+
+.footer-social-card:hover .footer-social-card__icon {
+  color: var(--c-blue-light);
+}
+
+.footer-social-card__icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.footer-social-card__network {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--c-white);
+  letter-spacing: 0.01em;
+}
+
+.footer-social-card__handle {
+  font-size: 0.6875rem;
+  color: var(--c-text-muted);
+  letter-spacing: 0.01em;
+}
+
+/* ── Mentor Social ── */
+.mentor-card__social {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+  padding-top: 0.875rem;
+  border-top: 1px solid var(--c-border);
+}
+
+.mentor-social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8125rem;
+  color: var(--c-text-dim);
+  transition: color var(--transition);
+}
+
+.mentor-social-link:hover {
+  color: var(--c-blue-light);
+}
+
+/* ── WhatsApp Float ── */
+.whatsapp-float {
+  position: fixed;
+  bottom: 1.75rem;
+  right: 1.75rem;
+  z-index: 900;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: #25D366;
+  color: #fff;
+  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.08);
+  box-shadow: 0 6px 28px rgba(37, 211, 102, 0.55);
 }
 
 @media (prefers-reduced-motion: reduce) {
